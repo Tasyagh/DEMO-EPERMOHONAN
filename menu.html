@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ILPS - ADMIN MENU</title>
+    <link rel="shortcut icon" href="my.png"/>
+    <!--Icon html activator-->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        button {
+            padding: 12px 12px;
+            width: 100%;
+            background-color: #bcd8f7;
+            color: #004a9e;
+            border: 0px solid #004003;
+            box-shadow: 0px 2px 10px 2px #70a5e0 inset;
+        }
+
+        button:hover {
+            padding: 12px 12px;
+            width: 100%;
+            background-color: #daf5db;
+            color: #004003;
+            border: 0px solid #004003;
+            box-shadow: 0px 2px 12px 6px #a0d9a2 inset;
+        }
+
+        .out {
+            padding: 12px 12px;
+            width: 100%;
+            background-color: #bcd8f7;
+            color: #004a9e;
+            border: 0px solid #004003;
+            box-shadow: 0px 2px 10px 2px #70a5e0 inset;
+        }
+
+        .out:hover {
+            padding: 14px 12px;
+            width: 100%;
+            background-color: #f23a3a;
+            color: white;
+            border: 0px solid #ad0303;
+            box-shadow: 0px 2px 10px 2px #ad0303 inset;
+        }
+        
+        a:link, a:visited {
+            background-color: transparent;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: transparent;
+        }
+        
+        .container {
+            width: 100%;
+        }
+        
+        .borderb {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .admin-info {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form style="margin-top: 10%;" class="borderb">
+            <center>
+                <br>
+                <center>
+                    <i style="font-size:30px;" class="fa fa-home"></i><br>
+                    <b>ADMIN MENU</b>
+                </center>
+                <br>
+                <div id="adminInfo" class="admin-info">
+                    Admin: <a href="editakaun.html" id="adminUsername"></a>
+                </div>
+
+                <!--Edit Tahun-->
+                <button onclick="showDemoAlert()" type="button" style="cursor:pointer;float:left;width:50%">
+                    <i style="font-size:18px" class="fa">&#xf044;</i>
+                    <br><br> Edit Sesi
+                </button>
+
+                <!--tambah kursus button-->
+                <button onclick="showDemoAlert()" type="button" style="cursor:pointer;float:left;width:50%">
+                    <i style="font-size:18px" class="fa">&#xf044;</i>
+                    <br><br> Edit Kursus
+                </button>
+                <br>
+
+                <!--lihat permohonan button-->
+                <button onclick="location.href='view.html'" type="button" style="cursor:pointer">
+                    <i style="font-size:20px" class="fa">&#xf115;</i>
+                    <br><br>Lihat Permohonan
+                </button>
+                <br>
+
+                <div style="width:100%">
+                    <!--edit akaun button-->
+                    <button onclick="showDemoAlert()" type="button" style="cursor:pointer">
+                        <i style="font-size:20px" class="fa">&#xf085;</i>
+                        <br><br>Edit Akaun
+                    </button>
+
+                    <!--logout button-->
+                    <button onclick="logout()" class="out" type="button" style="cursor:pointer">
+                        <i style="font-size:20px" class="fa">&#xf08b;</i>
+                        Log Keluar
+                    </button>
+                    <br><br><br>
+                </div>
+            </center>
+        </form>
+    </div>
+
+    <script>
+        // Check if user is logged in (using localStorage for demo purposes)
+        document.addEventListener('DOMContentLoaded', function() {
+            const loggedInUser = localStorage.getItem('adminUsername');
+            
+            if (!loggedInUser) {
+                // Redirect to login if not logged in
+                window.location.href = 'admin.html';
+            } else {
+                // Display admin username
+                document.getElementById('adminUsername').textContent = loggedInUser;
+                document.getElementById('adminUsername').href = 'editakaun.html?user=' + encodeURIComponent(loggedInUser);
+            }
+        });
+
+        function logout() {
+            // Clear the stored username
+            localStorage.removeItem('adminUsername');
+            
+            // Redirect to home page
+            window.location.href = 'index.html';
+        }
+
+        function showDemoAlert() {
+            alert("You are in demo mode. To access all features, please download the full version from GitHub.");
+        }
+    </script>
+</body>
+</html>

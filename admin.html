@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ILPS - ADMIN LOG IN</title>
+    <link rel="shortcut icon" href="my.png"/>
+    <!--Icon html activator-->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        button {
+            padding: 12px 12px;
+            width: 100%;
+            background-color: #bcd8f7;
+            color: black;
+            border: 0px solid #004003;
+            box-shadow: 0px 2px 10px 2px #70a5e0 inset;
+            border-radius: 20px;
+        }
+        button:hover {
+            padding: 12px 12px;
+            width: 100%;
+            background-color: #daf5db;
+            color: #004003;
+            border: 0px solid #004003;
+            box-shadow: 0px 2px 12px 6px #a0d9a2 inset;
+            border-radius: 20px;
+        }
+        .error {
+            color: red;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <br><br>
+    <form id="adminLoginForm" style="margin-top: 10%;" class="borderb">
+        <p><a href="index.html" style="color:black; float: left;"><i style="font-size:14px" class="fa">&#xf112;</i></a></p>
+        
+        <center><br>
+            <i style="font-size:30px;" class='fas fa-user-lock'></i>
+            <br>
+            <label><b>LOG MASUK ADMIN</b></label>
+            <div class="input-group">
+				<br>
+				<div id="errorMessage" class="error" style="display: none;"></div>
+                <br>
+				<label>Nama Pengguna</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <br>
+            <div class="input-group">
+                <label>Kata Laluan</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <br>
+            <div class="input-group">
+                <center><button type="submit">Log Masuk</button></center>
+            </div>
+        </center>
+    </form>
+</div>
+
+<script>
+    document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const errorElement = document.getElementById('errorMessage');
+        
+        // Hardcoded credentials
+        const validUsername = 'admin';
+        const validPassword = 'admin123';
+        
+        // Validate credentials
+        if (username === validUsername && password === validPassword) {
+            // Successful login - redirect to admin dashboard or perform other actions
+            errorElement.style.display = 'none';
+			localStorage.setItem('adminUsername', 'admin'); // After successful login
+            window.location.href = 'menu.html'; // Uncomment to redirect
+        } else {
+            // Failed login
+            errorElement.textContent = 'Nama pengguna atau kata laluan salah';
+            errorElement.style.display = 'block';
+        }
+    });
+</script>
+</body>
+</html>

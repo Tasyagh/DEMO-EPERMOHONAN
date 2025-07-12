@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html class="supernova">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="my.png"/>
+    <title>BORANG PERMOHONAN KEMASUKAN KE ILP SELANDAR</title>
+    <meta name="HandheldFriendly" content="true" />
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://cdn02.jotfor.ms/static/prototype.forms.js"></script>
+    <script src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.28746"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        a:link, a:visited {
+            background-color: transparent;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover, a:active {
+            background-color: transparent;
+        }
+        .tooltip2 {
+            position: relative;
+            display: inline-block;
+            border-bottom: 0px dotted black;
+            width: 100%;
+        }
+        .tooltip2 .tooltip2text {
+            visibility: hidden;
+            width: 120px;
+            background-color: grey;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 105%;
+            left: 10%;
+            margin-left: -60px;
+        }
+        .tooltip2 .tooltip2text::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent grey transparent;
+        }
+        .tooltip2:hover .tooltip2text {
+            visibility: visible;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 0px dotted black;
+            width: 90%;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: grey;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            left: 101%;
+        }
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent grey transparent transparent;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+        .form-label-left {
+            width: 170px;
+        }
+        .form-line {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        .form-label-right {
+            width: 150px;
+        }
+        body, html {
+            margin: 0px;
+            padding: 0px;
+            background: #ffffff;
+        }
+        .form-all {
+            margin: 0px auto;
+            padding-top: 0px;
+            width: 690px;
+            color: #666666 !important;
+            font-family: 'Arial';
+            font-size: 14px;
+        }
+        .form-radio-item label,
+        .form-checkbox-item label, 
+        .form-grading-label, 
+        .form-header {
+            color: false;
+        }
+        ul {
+            list-style-type: none;
+            padding: none;
+            margin-right: 20px;
+            margin-left: 0px;
+        }
+        li {
+            list-style-type: none;
+        }
+        .col-35 {
+            width: 100%;
+            padding: 2px 30px;
+            align: left;
+        }
+        .col-65 {
+            width: 100%;
+            padding: 2px 30px;
+            margin-bottom: 0.1px;
+        }
+        .col-50 {
+            width: 50%;
+            float: left;
+            padding: 2px 0px;
+        }
+        .form-required {
+            margin-left: 5px;
+            color: red;
+        }
+        .form-label.form-label-auto {
+            display: inline-block;
+            float: left;
+            text-align: left;
+        }
+        .form-all {
+            font-family: Arial, sans-serif;
+        }
+        .form-all .qq-upload-button,
+        .form-all .form-submit-button,
+        .form-all .form-submit-reset,
+        .form-all .form-submit-print {
+            font-family: Arial, sans-serif;
+        }
+        .form-all .form-pagebreak-back-container,
+        .form-all .form-pagebreak-next-container {
+            font-family: Arial, sans-serif;
+        }
+        .form-header-group {
+            font-family: Arial, sans-serif;
+        }
+        .form-label {
+            font-family: Arial, sans-serif;
+        }
+        .form-label.form-label-auto {  
+            display: inline-block;
+            float: left;
+            text-align: left;
+        }
+        .form-line {
+            margin-top: 2px 2px 2px 2px px;
+            margin-bottom: 12px 36px 12px 36px px;
+        }
+        .form-all {
+            width: 690px;
+        }
+        .form-label-left,
+        .form-label-right,
+        .form-label-left.form-label-auto,
+        .form-label-right.form-label-auto {
+            width: 200px;
+        }
+        .form-all {
+            font-size: 14px
+        }
+        .form-all .qq-upload-button,
+        .form-all .qq-upload-button,
+        .form-all .form-submit-button,
+        .form-all .form-submit-reset,
+        .form-all .form-submit-print {
+            font-size: 14px
+        }
+        .form-all .form-pagebreak-back-container,
+        .form-all .form-pagebreak-next-container {
+            font-size: 14px
+        } 
+        .supernova .form-all, .form-all {
+            background-color: #ffffff;
+            border: 1px solid transparent;
+        }
+        .form-all {
+            color: #666666;
+        }
+        .form-header-group .form-header {
+            color: #666666;
+        }
+        .form-header-group .form-subHeader {
+            color: #666666;
+        }
+        .form-label-top,
+        .form-label-left,
+        .form-label-right,
+        .form-html,
+        .form-checkbox-item label,
+        .form-radio-item label {
+            color: #666666;
+        }
+        .form-sub-label {
+            color: #808080;
+        }
+        .supernova {
+            background-color: #f5f5f5;
+        }
+        .supernova body {
+            background: transparent;
+        }
+        .form-textbox,
+        .form-textarea,
+        .form-radio-other-input,
+        .form-checkbox-other-input,
+        .form-captcha input,
+        .form-spinner input {
+            background-color: #fff;
+        }
+        .supernova {
+            background-image: none;
+        }
+        #stage {
+            background-image: none;
+        }
+        .form-all {
+            background-image: none;
+        } 
+        .form-all {
+            position: relative;
+        }
+        .form-all:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            background-size: 0px;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+        .form-all {
+            margin-top: 2px !important;
+        }
+        .form-all:before {
+            top: -2px;
+            background-position: top center;
+        }
+        .ie-8 .form-all:before { 
+            display: none; 
+        }
+        .ie-8 {
+            margin-top: auto;
+            margin-top: initial;
+        }
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        input[type=tel], select, textarea {
+            width: 60px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        } 
+        input[type=tel2], select, textarea {
+            width: 160px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        } 
+        input[type=email], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        } 
+        input[type=alamat], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            float: right;
+        }
+        form-description-content {
+            padding: 10px;
+            font-size: 10px;
+            color: #333;
+        }
+        .form-description {
+            z-index: 1000;
+            position: absolute;
+            right: 7px;
+            max-width: 300px;
+            top: 2px;
+            border: 4px solid #ccc;
+            border-radius: 6px 6px;
+            box-shadow: 0px 2px 4px #666;
+            background: #f5f5f5;
+            white-space: normal;
+        }
+        #page-foot {
+            padding: 10px;
+            background: #2043a1;
+            color: #f2f2f2;
+            position: fixed; 
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            font-family: Copperplate, Cursive;
+            font-size: 12px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        #page-main {
+            margin-bottom: 45px; 
+            padding: 5px;
+        }
+        .form-matrix-values {
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+        .form-matrix-row-headers +
+        .form-matrix-values 
+        .form-textbox {
+            width: 200px; 
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+        .form-matrix-row-headers +
+        .form-matrix-values +
+        .form-matrix-values 
+        .form-textbox {
+            width: 250px; 
+        }
+        .form-matrix-row-headers +
+        .form-matrix-values +
+        .form-matrix-values +
+        .form-matrix-values 
+        .form-textbox {
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <form id="applicationForm" accept-charset="utf-8" autocomplete="on" style="margin-bottom:50px;margin-top:50px;">
+        <ul class="form-section page-section">
+            <!--logo-->
+            <div class="header-text httac htvam" align="center">
+                <img src="ksm.png" alt="Logo" style="width:80px;height:60px">
+                <img src="my.png" alt="Logo" style="width:80px;height:60px">
+                <img src="jtm.png" alt="Logo" style="width:80px;height:60px">
+            </div>
+            <!--end logo-->
+            
+            <div role="main" class="form-all">
+                <div class="col-65"> 
+                    <!--header-->  
+                    <li id="cid_1" class="form-input-wide" data-type="control_head" align="center">	
+                        <div class="form-header-group header-small">
+                            <h2 id="header_1" class="form-header" data-component="header">
+                                BORANG PERMOHONAN KEMASUKAN SESI <span id="currentSession"></span>
+                            </h2>
+                            <div id="subHeader_1" class="form-subHeader">
+                                INSTITUT LATIHAN PERINDUSTRIAN SELANDAR, MELAKA
+                            </div>
+                        </div>
+                    </li>
+                    <!--end header-->	
+                    
+                    <!--divider-->	      
+                    <li class="form-line" data-type="control_divider" id="id_32">
+                        <div id="cid_32" class="form-input-wide">
+                            <div aria-label="Divider" data-component="divider" style="border-bottom:1px solid #e6e6e6;height:1px;margin-left:30px;margin-right:30px;margin-top:5px;margin-bottom:5px"></div>
+                        </div>
+                    </li>
+                    <!--divider-->
+                    
+                    <!--nama penuh-->
+                    <li class="form-line jf-required" data-type="control_textbox" id="id_30">
+                        <label class="col-35" id="label_30" for="input_30">
+                            NAMA PENUH
+                            <span class="form-required">*</span>
+                        </label>
+                        <div class="col-65">
+                            <input type="text" id="input_30" name="namaPenuh" class="form-textbox" size="50" required />
+                        </div>
+                    </li>
+                    
+                    <!--no kad pengenalan-->
+                    <li class="form-line jf-required" data-type="control_textbox" id="id_37">
+                        <label class="col-35" id="label_37" for="input_37">
+                            NO. KAD PENGENALAN 
+                            <span class="form-required">*</span>
+                            [000000-00-0000]
+                        </label>
+                        <div class="col-65">
+                            <div class="tooltip2">
+                                <input type="text" id="input_37" name="Kp" class="form-textbox" size="20" pattern="[0-9]{6}-[0-9]{2}-[0-9]{4}" placeholder="Masukkan nombor kad pengenalan 12 angka seperti ini 000000-00-0000" required />
+                                <span class="tooltip2text" style="font-size:8px;">000000-00-0000</span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!--alamat-->
+                    <li class="form-line jf-required" data-type="control_textbox" id="id_37">
+                        <label class="col-35" id="label_34" for="input_34_addr_line1"> 
+                            ALAMAT
+                            <span class="form-required">*</span>
+                        </label>
+                        <div class="col-65">
+                            <span class="form-address-line form-address-street-line jsTest-address-lineField">
+                                <span class="form-sub-label-container" style="vertical-align:top">
+                                    <input type="alamat" id="input_34_addr_line1" name="alamatNo" placeholder="NO. RUMAH/ JALAN" class="form-textbox form-address-line" required />
+                                </span>
+                            </span>
+                        </div>
+                        <div class="col-65">
+                            <span class="form-address-line form-address-street-line jsTest-address-lineField">
+                                <span class="form-sub-label-container" style="vertical-align:top">
+                                    <input type="alamat" id="input_34_addr_line2" name="alamatKampung" placeholder="TAMAN/ KAMPUNG" class="form-textbox form-address-line" required />
+                                </span>
+                            </span>
+                        </div>
+                        <div class="col-65">
+                            <div class="col-50">
+                                <span class="form-address-line form-address-city-line jsTest-address-lineField ">
+                                    <span class="form-sub-label-container" style="vertical-align:top">
+                                        <input type="alamat" id="input_34_city" name="alamatBandar" class="form-textbox form-address-city" placeholder="BANDAR" required />
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-50">
+                                <span class="form-address-line form-address-state-line jsTest-address-lineField ">
+                                    <span class="form-sub-label-container" style="vertical-align:top">
+                                        <input type="alamat" id="input_34_state" name="alamatNegeri" class="form-textbox form-address-state" placeholder="NEGERI" required />
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-65">
+                            <div class="col-50">
+                                <span class="form-address-line form-address-zip-line jsTest-address-lineField ">
+                                    <span class="form-sub-label-container" style="vertical-align:top">
+                                        <input type="alamat" id="input_34_postal" name="alamatPoskod" placeholder="POSKOD" class="form-textbox form-address-postal" required />
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-50">
+                                <span class="form-address-line form-address-country-line jsTest-address-lineField ">
+                                    <span class="form-sub-label-container" style="vertical-align:top">
+                                        <select class="form-dropdown form-address-country noTranslate" name="alamatNegara" id="input_34_country" required>
+                                            <option style="color:#666666;" value=""> NEGARA </option>
+                                            <option value="Malaysia" selected> Malaysia </option>
+                                            <option value="United States"> United States </option>
+                                            <!-- Other country options removed for brevity -->
+                                        </select>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </li> 
+                    
+                    <!--no tel sendiri-->	
+                    <div class="col-65">
+                        <li class="form-line jf-required" data-type="control_phone" id="id_35" style="padding-top:200px">
+                            <label style="float:left" class="form-label form-label-left form-label-auto" id="label_35" for="input_35_area"> 
+                                NO. TELEFON <span class="form-required">*</span>
+                            </label>
+                            <div id="cid_35" class="form-input jf-required">
+                                <div data-wrapper-react="true">
+                                    <span class="form-sub-label-container" style="vertical-align:top" data-input-type="areaCode">
+                                        <input type="tel" id="input_35_area" name="noTelDepanS" class="form-textbox" required />
+                                        <span class="phone-separate" aria-hidden="true">-</span>
+                                        <label class="form-sub-label" for="input_35_area" id="sublabel_35_area" style="min-height:13px" aria-hidden="false"></label>
+                                    </span>
+                                    <span class="form-sub-label-container" style="vertical-align:top" data-input-type="phone">
+                                        <input type="tel2" id="input_35_phone" name="noTelBelakangS" class="form-textbox" required />
+                                        <label class="form-sub-label" for="input_35_phone" id="sublabel_35_phone" style="min-height:13px" aria-hidden="false"></label>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                    
+                    <!--notel ibubapa-->
+                    <div class="col-65">
+                        <li class="form-line" data-type="control_phone" id="id_36">
+                            <label style="float:left" class="form-label form-label-left form-label-auto" id="label_36" for="input_36_area"> 
+                                NO. TELEFON (IBUBAPA) 
+                            </label>
+                            <div id="cid_36" class="form-input">
+                                <div data-wrapper-react="true">
+                                    <span class="form-sub-label-container" style="vertical-align:top" data-input-type="areaCode">
+                                        <input type="tel" id="input_36_area" name="noTelDepanIB" class="form-textbox" />
+                                        <span class="phone-separate" aria-hidden="true">-</span>
+                                        <label class="form-sub-label" for="input_36_area" id="sublabel_36_area" style="min-height:13px" aria-hidden="false"></label>
+                                    </span>
+                                    <span class="form-sub-label-container" style="vertical-align:top" data-input-type="phone">
+                                        <input type="tel2" id="input_36_phone" name="noTelBelakangIB" class="form-textbox" />
+                                        <label class="form-sub-label" for="input_36_phone" id="sublabel_36_phone" style="min-height:13px" aria-hidden="false"></label>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                    
+                    <!--email-->
+                    <li class="form-line jf-required" data-type="control_email" id="id_6">
+                        <label style="float:left" class="col-35" id="label_6" for="input_6">
+                            E-MAIL
+                            <span class="form-required">*</span>
+                        </label>
+                        <div id="cid_6" class="col-65">
+                            <input type="email" id="input_6" name="email" class="form-textbox" size="20" placeholder="Cth: ahmad@yahoo.com" required />
+                        </div>
+                    </li>
+                    
+                    <!--divider-->
+                    <li class="form-line" data-type="control_divider" id="id_32">
+                        <div id="cid_32" class="form-input-wide">
+                            <div aria-label="Divider" data-component="divider" style="border-bottom:1px solid #e6e6e6;height:1px;margin-left:30px;margin-right:30px;margin-top:5px;margin-bottom:5px"></div>
+                        </div>
+                    </li>
+                    
+                    <!--nama sekolah-->
+                    <li class="form-line jf-required" data-type="control_textbox" id="id_18">
+                        <label style="float:left" class="col-35" id="label_18" for="input_18">
+                            NAMA SEKOLAH
+                            <span class="form-required">*</span>
+                        </label>
+                        <div id="cid_18" class="col-65">
+                            <input type="text" id="input_18" name="namaSekolah" class="form-textbox" size="60" required />
+                        </div>
+                    </li>
+                    
+                    <!--kursus pilihan-->
+                    <li class="form-line jf-required" data-type="control_radio" id="id_38">
+                        <label class="col-35" id="label_38" for="input_38">
+                            KURSUS PILIHAN
+                            <span class="form-required">*</span>
+                        </label>
+                        <div id="cid_38" class="col-65">
+                            <div class="form-single-column" role="group" aria-labelledby="label_38" data-component="radio">
+                                <span class="form-radio-item" style="clear:left">
+                                    <span class="dragger-item"></span>
+                                    <div id="courseOptions"></div>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!--tahun spm-->
+                    <li class="form-line jf-required" data-type="control_textbox" id="id_39">
+                        <label class="col-35" id="label_39" for="input_39">
+                            TAHUN SPM
+                            <span class="form-required">*</span>
+                        </label>
+                        <div id="cid_39" class="col-65">
+                            <span class="form-sub-label-container" style="vertical-align:top">
+                                <input type="text" id="input_39" name="tahunSpm" class="form-textbox" size="20" required />
+                                <label class="form-sub-label" for="input_39" id="sublabel_input_39" style="min-height:13px" aria-hidden="false"> SPM TERKINI atau tahun-tahun sebelumnya </label>
+                            </span>
+                        </div>
+                    </li>
+                    
+                    <li class="form-line form-line-column form-col-1" data-type="control_text" id="id_27">
+                        <div id="cid_27" class="col-65">
+                            <div id="text_27" class="form-html" data-component="text">
+                                <p><span style="text-decoration: underline;"><strong>Kelayakan</strong> : <em>Minima SPM (LULUS Bahasa Melayu) <strong>ATAU</strong> memiliki SVM (Sijil Vokasional Malaysia)</em></span></p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!--keputusan spm-->
+                    <li class="form-line jf-required" data-type="control_matrix" id="id_24">
+                        <label class="col-35" id="label_24" for="input_24">
+                            KEPUTUSAN SPM
+                            <span class="form-required">*</span>
+                        </label>
+                        <div id="cid_24" class="col-65">
+                            <table summary="" aria-labelledby="label_24" cellPadding="4" cellSpacing="0" class="form-matrix-table" style="width:200px" data-component="matrix">
+                                <tr class="form-matrix-tr form-matrix-header-tr">
+                                    <th class="form-matrix-th" style="border:none"></th>
+                                    <th scope="col" style="width:200px;font-weight:bold;border: 1px solid #f2f2f2;" class="form-matrix-headers form-matrix-column-headers form-matrix-column_0" style="width:200px">
+                                        <label id="label_24_col_0"> BAHASA MELAYU </label>
+                                    </th>
+                                    <th scope="col" style="width:200px;font-weight:bold;border: 1px solid #f2f2f2;" class="form-matrix-headers form-matrix-column-headers form-matrix-column_1" style="width:200px">
+                                        <label id="label_24_col_1"> MATEMATIK </label>
+                                    </th>
+                                    <th scope="col" style="width:200px;font-weight:bold;border: 1px solid #f2f2f2;" class="form-matrix-headers form-matrix-column-headers form-matrix-column_2" style="width:200px">
+                                        <label id="label_24_col_2"> SEJARAH </label>
+                                    </th>
+                                </tr>
+                                <tr class="form-matrix-tr form-matrix-value-tr" aria-labelledby="label_24 label_24_row_0">
+                                    <th scope="row" style="width:200px;font-weight:bold;border: 1px solid #f2f2f2;" class="form-matrix-headers form-matrix-row-headers">
+                                        <label id="label_24_row_0"> GRED </label>
+                                    </th>
+                                    <td style="width:200px;font-weight:bold;border: 1px solid #f2f2f2;" class="form-matrix-values">
+                                        <select id="input_24_0_0" class="form-dropdown" name="keputusanBM" style="width:100%;box-sizing:border-box" aria-labelledby="label_24_col_0 label_24_row_0" required>
+                                            <option aria-label="Please select">  </option>
+                                            <option value="A+  (Cemerlang Tertinggi)"> A+ (Cemerlang Tertinggi) </option>
+                                            <option value="A    (Cemerlang Tinggi)"> A (Cemerlang Tinggi) </option>
+                                            <option value="A-   (Cemerlang)"> A- (Cemerlang) </option>
+                                            <option value="B+   (Kepujian Tertinggi)"> B+ (Kepujian Tertinggi) </option>
+                                            <option value="B     (Kepujian Tinggi)"> B (Kepujian Tinggi) </option>
+                                            <option value="C+   (Kepujian Atas)"> C+ (Kepujian Atas) </option>
+                                            <option value="C    (Kepujian)"> C (Kepujian) </option>
+                                            <option value="D   (Lulus Atas)"> D (Lulus Atas) </option>
+                                            <option value="E   (Lulus)"> E (Lulus) </option>
+                                            <option value="G  (Gagal)"> G (Gagal) </option>
+                                            <option value="TH  (Tidak Hadir)"> TH (Tidak Hadir) </option>
+                                        </select>
+                                    </td>
+                                    <td style="width:200px;font-weight:bold;border: 1px solid #f2f2f2;" class="form-matrix-values">
+                                        <select id="input_24_0_1" class="form-dropdown" name="keputusanMath" style="width:100%;box-sizing:border-box" aria-labelledby="label_24_col_1 label_24_row_0" required>
+                                            <option aria-label="Please select">  </option>
+                                            <option value="A+  (Cemerlang Tertinggi)"> A+ (Cemerlang Tertinggi) </option>
+                                            <option value="A    (Cemerlang Tinggi)"> A (Cemerlang Tinggi) </option>
+                                            <option value="A-   (Cemerlang)"> A- (Cemerlang) </option>
+                                            <option value="B+   (Kepujian Tertinggi)"> B+ (Kepujian Tertinggi) </option>
+                                            <option value="B     (Kepujian Tinggi)"> B (Kepujian Tinggi) </option>
+                                            <option value="C+   (Kepujian Atas)"> C+ (Kepujian Atas) </option>
+                                            <option value="C    (Kepujian)"> C (Kepujian) </option>
+                                            <option value="D   (Lulus Atas)"> D (Lulus Atas) </option>
+                                            <option value="E   (Lulus)"> E (Lulus) </option>
+                                            <option value="G  (Gagal)"> G (Gagal) </option>
+                                            <option value="TH  (Tidak Hadir)"> TH (Tidak Hadir) </option>
+                                        </select>
+                                    </td>
+                                    <td style="width:200px;font-weight:bold;border: 1px solid #f2f2f2;" class="form-matrix-values">
+                                        <select id="input_24_0_2" class="form-dropdown" name="keputusanSej" style="width:100%;box-sizing:border-box" aria-labelledby="label_24_col_2 label_24_row_0" required>
+                                            <option aria-label="Please select">  </option>
+                                            <option value="A+  (Cemerlang Tertinggi)"> A+ (Cemerlang Tertinggi) </option>
+                                            <option value="A    (Cemerlang Tinggi)"> A (Cemerlang Tinggi) </option>
+                                            <option value="A-   (Cemerlang)"> A- (Cemerlang) </option>
+                                            <option value="B+   (Kepujian Tertinggi)"> B+ (Kepujian Tertinggi) </option>
+                                            <option value="B     (Kepujian Tinggi)"> B (Kepujian Tinggi) </option>
+                                            <option value="C+   (Kepujian Atas)"> C+ (Kepujian Atas) </option>
+                                            <option value="C    (Kepujian)"> C (Kepujian) </option>
+                                            <option value="D   (Lulus Atas)"> D (Lulus Atas) </option>
+                                            <option value="E   (Lulus)"> E (Lulus) </option>
+                                            <option value="G  (Gagal)"> G (Gagal) </option>
+                                            <option value="TH  (Tidak Hadir)"> TH (Tidak Hadir) </option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div> 
+                    </li>
+                    
+                    <!-- subjek lain-->
+                    <li class="form-line jf-required" data-type="control_textbox" id="id_26">
+                        <label class="col-35" id="label_26" for="input_26">
+                            * Lain-lain subjek SPM (1 sahaja)
+                            <span class="form-required">*</span>
+                        </label>
+                        <div id="cid_26" class="col-65">
+                            <div class="tooltip">
+                                <span class="form-sub-label-container" style="vertical-align:top">
+                                    <input type="text" id="input_26" name="subjekLain" class="form-textbox" size="20" placeholder="Cth:  Sains / Gred C+" required />
+                                    <label class="form-sub-label" for="input_26" id="sublabel_input_26" style="min-height:13px" aria-hidden="false"> Nyatakan Nama Subjek dan Gred Tertinggi </label>
+                                </span>
+                                <span class="tooltiptext" style="font-size:10px;">1 Sahaja Nama Subjek dengan Gred Tertinggi</span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!--divider-->
+                    <li class="form-line" data-type="control_divider" id="id_31">
+                        <div id="cid_31" class="form-input-wide">
+                            <div aria-label="Divider" data-component="divider" style="border-bottom:1px solid #e6e6e6;height:1px;margin-left:30px;margin-right:30px;margin-top:5px;margin-bottom:5px"></div>
+                        </div>
+                    </li>
+                    
+                    <!--akuan-->
+                    <li class="form-line jf-required" data-type="control_radio" id="id_29">
+                        <label class="col-35" id="label_29" for="input_29">
+                            Akuan
+                            <span class="form-required">*</span>
+                        </label>
+                        <div id="cid_29" class="form-input jf-required">
+                            <div class="col-65" role="group" aria-labelledby="label_29" data-component="radio">
+                                <span class="form-radio-item" style="clear:left">
+                                    <span class="dragger-item"></span>
+                                    <input type="radio" aria-describedby="label_29" class="form-radio" id="input_29_0" name="q29_akuan" value="Saya mengaku bahawa semua keterangan yang diberikan adalah BENAR. Pihak institut berhak membatalkan permohonan saya sekiranya terdapat kenyataan yang tidak benar." required />
+                                    <label id="label_input_29_0" for="input_29_0"> Saya mengaku bahawa semua keterangan yang diberikan adalah BENAR. Pihak institut berhak membatalkan permohonan saya sekiranya terdapat kenyataan yang tidak benar. </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!--recaptcha-->
+                    <label class="col-35" id="label_41" for="input_41">
+                        Please verify that you are human / Sila TICK kotak [ I'm not a robot ]
+                        <span class="form-required">*</span>
+                    </label>
+                    <div class="col-65">
+                        <div class="g-recaptcha" data-sitekey="6LeZtFQeAAAAANF9Cl2uY5OFNCGDK5-rTCoUZ3LR"></div>
+                        <p id="recaptchaError" class="red" style="display:none;color:red;">Tick kotak [I'm not a robot]</p>
+                    </div>
+                    
+                    <!--Button hantar permohonan ini button-->
+                    <br>
+                    <li class="form-line" data-type="control_button" id="id_2">
+                        <div id="cid_2" class="form-input-wide">
+                            <div style="text-align:center" data-align="center" class="form-buttons-wrapper form-buttons-left jsTest-button-wrapperField">
+                                <button id="submit" name="submit" value="submit" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button">
+                                    HANTAR PERMOHONAN INI
+                                </button> 
+                            </div>
+                        </div>
+                    </li>
+                    <br><br>
+                    <!--End button hantar permohonan-->
+                </div>
+            </div>
+        </ul>
+    </form>
+    
+    <!-- [FOOTER] -->
+    <footer id="page-foot">
+        <img src="my.png" alt="Logo" style="width:20px;height:12px;"> &copy; ILP SELANDAR 
+        <a style="background-color:green;border:1px solid white;color:#f2f2f2;padding: 2px 20px;border-radius: 8px;margin-left: 20px;" href="admin.html">
+            <i class='fas fa-user-lock'></i> Log Admin
+        </a>
+    </footer>
+    <!--tutup footer-->	
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch and display current session
+            fetchCurrentSession();
+            
+            // Fetch and display course options
+            fetchCourseOptions();
+            
+            // Form submission handler
+            document.getElementById('applicationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate reCAPTCHA
+                const response = grecaptcha.getResponse();
+                if(response.length === 0) {
+                    document.getElementById('recaptchaError').style.display = 'block';
+                    return false;
+                }
+                
+                // If validation passes, submit the form
+                submitForm();
+            });
+        });
+        
+        function fetchCurrentSession() {
+            document.getElementById('currentSession').textContent = '2024/2025';
+        }
+        
+        function fetchCourseOptions() {
+            // Hard code for demo puprpose
+            const courses = [
+                {kodKursus: 'K001', namaKursus: 'Teknologi Elektrik'},
+                {kodKursus: 'K002', namaKursus: 'Teknologi Elektronik'},
+                {kodKursus: 'K003', namaKursus: 'Teknologi Mekanikal'}
+            ];
+            
+            const courseOptionsContainer = document.getElementById('courseOptions');
+            courses.forEach(course => {
+                const div = document.createElement('div');
+                div.innerHTML = `
+                    <input name="kursusPilihan" type="radio" value="${course.kodKursus}-${course.namaKursus}" required />
+                    <label>${course.kodKursus}</label> - ${course.namaKursus}
+                `;
+                courseOptionsContainer.appendChild(div);
+            });
+        }
+        
+        function submitForm() {
+            // Collect form data
+            const formData = new FormData(document.getElementById('applicationForm'));
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            // Here you would typically send the data to your server
+            console.log('Form data:', data);
+            
+            // For demo purposes, we'll just show an alert
+            alert('Permohonan anda telah berjaya dihantar!');
+            
+            // Reset form
+            document.getElementById('applicationForm').reset();
+            grecaptcha.reset();
+            document.getElementById('recaptchaError').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

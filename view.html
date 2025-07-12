@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ILPS - ADMIN LIHAT PERMOHONAN</title>
+    <link rel="shortcut icon" href="my.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th, td {  
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        tr:nth-child(even){
+            background-color:#fcfcfc;
+        }
+        tr:hover {
+            background-color:#f7f7f7;
+        }
+        i{
+            color: #fc1212;
+        }
+        i:hover{
+            color: #d61c1c;
+        }
+        .deleteAll{
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 12px;
+            justify-content: center;
+            border: 1px solid transparent;
+        }
+        .deleteAll:hover{
+            color: white;
+            background-color: rgba(173, 14, 14, 0.9);
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 12px;
+            justify-content: center;
+            border: 1px solid transparent;
+        }
+        .export{
+            color: white;
+            background-color: #31ad6b;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            justify-content: center;
+            border: 1px solid #31ad6b;
+        }	
+        .export:hover{
+            color: white;
+            background-color: #397d59;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            justify-content: center;
+            border: 1px solid #397d59;
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+            padding-right: 8px;
+            padding: 6px 12px;
+            border: 1 px solid #d1d1d1;
+            border-radius: 4px;
+            color: #5e5e5e;
+        }
+        input[type=submit]{
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            justify-content: center;
+            border: 1px solid transparent;
+        }
+        .container {
+            width: 100%;
+        }
+        .borderf {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="borderf">
+        <center>
+            <a href="menu.html" style="color:black;float:left;"><i style="font-size:14px" class="fa">&#xf112;</i></a>
+            <p><a href="menu.html" style="color: red; float: right;">Tutup</a></p>
+            <h2>REKOD PERMOHONAN PELAJAR</h2>
+            <h5>KE INSTITUT LATIHAN PERINDUSTRIAN SELANDAR</h5>
+        </center>
+    </div>
+    
+    <div class="borderf">
+        <center>
+            <button title="Clear all data and records from database" class="deleteAll" onclick="deleteAllData()">Clear All Data</button>
+            <button type="button" id="deleteSelectedBtn" disabled onclick="deleteSelectedRows()">Delete Selected Data</button>
+            <select name="file_type" id="file_type">
+                <option value="xlsx">Export to Excel</option>
+            </select>
+            <button title="Save data into excel file" class="export" onclick="exportToExcel()"><i style="font-size:15px;color:white" class="fa">&#xf019;</i></button>
+        </center>
+    </div>
+    
+    <div class="borderf">
+        <table class="table table-striped table-bordered" style="width: 100%;" id="dataTable">
+            <tr>
+                <th>No.</th>
+                <th>Nama Penuh</th>
+                <th>ID</th>
+                <th>No. Kad Pengenalan</th>
+                <th>Alamat</th>
+                <th>No. Tel Pelajar</th>
+                <th>No. Tel Ibu Bapa</th>
+                <th>Email</th>
+                <th>Nama Sekolah</th>
+                <th>Kursus Pilihan</th>
+                <th>Tahun SPM</th>
+                <th>Keputusan BM</th>
+                <th>Keputusan Math</th>
+                <th>Keputusan Sej</th>
+                <th>Subjek Lain</th>
+                <th colspan="2">Action</th>
+            </tr>
+            <tr data-id="1001">
+                <td>1</td>
+                <td>Ali bin Ahmad</td>
+                <td>1001</td>
+                <td>900101-01-1234</td>
+                <td>No 12, Jalan Mawar, Taman Bahagia, Seremban, Negeri Sembilan, 70450, Malaysia</td>
+                <td>012-3456789</td>
+                <td>019-8765432</td>
+                <td>ali@gmail.com</td>
+                <td>SMK Seri Bahagia</td>
+                <td>K001-Teknologi Elektrik</td>
+                <td>2022</td>
+                <td>B (Kepujian Tinggi)</td>
+                <td>A- (Cemerlang)</td>
+                <td>C (Kepujian)</td>
+                <td>Sains / Gred B</td>
+                <td><center><a href="#" onclick="deleteRow(1001)"><i class="fa fa-trash"></i></a></center></td>
+                <td><input type="checkbox" name="id[]" value="1001"></td>
+            </tr>
+            <tr data-id="1002">
+                <td>2</td>
+                <td>Siti binti Mohd</td>
+                <td>1002</td>
+                <td>950202-02-5678</td>
+                <td>No 45, Jalan Melati, Taman Damai, Melaka, Melaka, 75000, Malaysia</td>
+                <td>011-2345678</td>
+                <td>016-7654321</td>
+                <td>siti@yahoo.com</td>
+                <td>SMK Tun Perak</td>
+                <td>K002-Teknologi Elektronik</td>
+                <td>2021</td>
+                <td>A- (Cemerlang)</td>
+                <td>B+ (Kepujian Tertinggi)</td>
+                <td>B (Kepujian Tinggi)</td>
+                <td>Fizik / Gred A-</td>
+                <td><center><a href="#" onclick="deleteRow(1002)"><i class="fa fa-trash"></i></a></center></td>
+                <td><input type="checkbox" name="id[]" value="1002"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Initialize the table with row numbers
+    document.addEventListener('DOMContentLoaded', function() {
+        updateRowNumbers();
+        
+        // Enable/disable delete selected button based on checkbox state
+        $("input[type='checkbox']").change(function() {
+            const checkedCount = $("input[type='checkbox']:checked").length;
+            $("#deleteSelectedBtn").prop("disabled", checkedCount === 0);
+        });
+    });
+
+    function updateRowNumbers() {
+        const rows = document.querySelectorAll("#dataTable tr:not(:first-child)");
+        rows.forEach((row, index) => {
+            row.cells[0].textContent = index + 1;
+        });
+    }
+
+    function deleteRow(id) {
+        if (confirm("Are you sure you want to delete this item?")) {
+            const row = document.querySelector(`tr[data-id="${id}"]`);
+            if (row) {
+                row.remove();
+                updateRowNumbers();
+            }
+        }
+    }
+
+    function deleteSelectedRows() {
+        const checkedBoxes = document.querySelectorAll("input[type='checkbox']:checked");
+        if (checkedBoxes.length === 0) {
+            alert("Please select at least one row to delete");
+            return;
+        }
+
+        if (confirm("Are you sure you want to delete the selected items?")) {
+            checkedBoxes.forEach(checkbox => {
+                const row = checkbox.closest("tr");
+                if (row) {
+                    row.remove();
+                }
+            });
+            updateRowNumbers();
+            $("#deleteSelectedBtn").prop("disabled", true);
+        }
+    }
+
+    function deleteAllData() {
+        if (confirm("Are you sure you want to delete all the items?")) {
+            const table = document.getElementById("dataTable");
+            // Remove all rows except the header
+            while (table.rows.length > 1) {
+                table.deleteRow(1);
+            }
+            // Disable delete selected button
+            $("#deleteSelectedBtn").prop("disabled", true);
+        }
+    }
+
+    function exportToExcel() {
+        const table = document.getElementById("dataTable");
+        const wb = XLSX.utils.table_to_book(table, {sheet:"Sheet 1"});
+        XLSX.writeFile(wb, "permohonan_pelajar.xlsx");
+    }
+</script>
+</body>
+</html>
